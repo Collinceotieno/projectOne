@@ -1,0 +1,39 @@
+{% extends 'master.html' %}
+{% load static %}
+{% block content %}
+     <div class="box_element" id="form-swipper">
+              <form id="form">
+                  <div id="user-info">
+                      <div class="form-one">
+                          <h1>Customer Shipment Details</h1>
+                          <input required class="form-control" type="text" name="name" placeholder="Enter name">
+                           <input required class="form-control" type="email" name="email" placeholder="Enter email">
+                      </div>
+                  </div>
+                  <div id="shipping-info">
+                      <hr>
+                      <p>Shipping information:</p>
+                      <hr>
+                      <div class="form-one">
+                          <input class="form-control" type="text" name="address" placeholder="Enter address">
+                      </div>
+                      <div class="form-one">
+                            <input class="form-control" type="text" name="city" placeholder="Enter city">
+                      </div>
+                      <div class="form-one">
+                           <input class="form-control" type="text" name="state" placeholder="Enter state">
+                      </div>
+                      <div class="form-one">
+                          <input class="form-control" type="text" name="zipcode" placeholder="Enter Zip code">
+                      </div>
+                      <div class="form-one">
+                          <input class="form-control" type="text" name="Country" placeholder="Enter Country code ">
+                      </div>
+
+
+                  </div>
+                  <hr>
+                  <input id="form-button" class="btn btn-success btn-block" type="submit" value="continue">
+              </form>
+          </div>
+{% endblock %}

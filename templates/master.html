@@ -20,10 +20,10 @@
   <!-- Links -->
   <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="{% url 'home-url' %}">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="{% url 'home-url' %}">About</a>
       </li>
 
       <!-- Dropdown -->
@@ -32,8 +32,8 @@
           Products
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Add products</a>
-          <a class="dropdown-item" href="#">Update</a>
+          <a class="dropdown-item" href="{% url 'add-products-url' %}">Add products</a>
+          <a class="dropdown-item" href="{% url 'update-url' %}">Update</a>
           <a class="dropdown-item" href="#">Pay</a>
         </div>
       </li>
@@ -53,7 +53,15 @@
       <br>
       <br>
       <li class="nav-item">
-        <a class="nav-link" href="#">pick up destination</a>
+        <a class="nav-link" href="{% url 'shipment-url' %}">Shipment details</a>
+      </li>
+      <li>
+          <a href="#like" class="mx-3">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#user"></use>
+              </svg>
+              {{ user.email }}
+          </a>
       </li>
   </ul>
 
@@ -66,6 +74,112 @@
 
     {% endblock %}
 </div>
+<footer id="footer" class="mt-5">
+    <div class="container">
+        <div class="row d-flex flex-wrap justify-content-between py-5">
+            <div class="col-md-4 col-sm-6">
+                <div class="footer-menu footer-menu-001">
+                    <div class="footer-intro mb-4">
+                        <a href="{% url 'home-url' %}">
+                            <img src="{% static 'images/main-logo.png' %}" alt="logo">
+                        </a>
+                    </div>
+                    <p>We provide genuine products at the comfort your resting place.</p>
+                    <div class="social-links">
+                        <ul class="list-unstyled d-flex flex-wrap gap-4">
+                            <li>
+                                <a href="#" class="">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" class="svg-color">
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" class="svg-color">
+                                        <use xlink:href="#twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" class="svg-color">
+                                        <use xlink:href="#youtube"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" class="svg-color">
+                                        <use xlink:href="#pinterest"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" class="svg-color">
+                                        <use xlink:href="#instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <div class="footer-menu footer-menu-002">
+                    <h5 class="widget-title text-uppercase mb-4">Quick Links</h5>
+                    <ul class="menu-list list-unstyled text-uppercase border-animation-left fs-6">
+                        <li class="menu-item mb-2">
+                            <a href="{% url 'home-url' %}" class="item-anchor">Home</a>
+                        </li>
+                        <li class="menu-item mb-2">
+                            <a href="{% url 'home-url' %}" class="item-anchor">About</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <div class="footer-menu footer-menu-003">
+                    <h5 class="widget-title text-uppercase mb-4">Help & Info</h5>
+                    <ul class="menu-list list-unstyled text-uppercase border-animation-left fs-6">
+                        <li class="menu-item mb-2">
+                            <a href="#" class="item-anchor">Shipping + Delivery</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-menu footer-menu-004 border-animation-left">
+                    <h5 class="widget-title text-uppercase mb-4">Reach Us</h5>
+                    <p>Any suggetion can reach us through <a href="mailto:contact@yourcompany.com"
+                                                                    class="item-anchor">thegreensop@gmail.com</a></p>
+                    <p>For any inquiry call us through. <a href="tel:+2547693478" class="item-anchor">+2547693478</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="border-top py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 d-flex flex-wrap">
+                    <div class="shipping">
+                        <span>We ship with:</span>
+                        <img src="{% static 'images/arct-icon.png' %}" alt="icon">
+                        <img src="{% static 'images/dhl-logo.png' %}" alt="icon">
+                    </div>
+
+                </div>
+                <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                    <p>© Copyright 2023. All rights reserved. <a href="Colloh" target="_blank">TemplatesJungle</a></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
